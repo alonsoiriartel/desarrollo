@@ -1,0 +1,5 @@
+# Alternativa de ambas bases a la vez, únicamente si el docente la solicita.
+# Para seguir las etapas del manual, usar compose-mysql.yaml y compose-mongo.yaml.
+include:
+  - compose-mysql.yaml
+  - compose-mongo.yaml

@@ -1,0 +1,14 @@
+services:
+  mongo:
+    image: mongo:8.0
+    container_name: aula-mongo-modular
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    ports:
+      - '127.0.0.1:27018:27017'
+    volumes:
+      - mongo_etapas:/data/db
+volumes:
+  mongo_etapas:
